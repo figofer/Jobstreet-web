@@ -1,0 +1,12 @@
+import dayjs from "dayjs";
+import "dayjs/locale/en";
+import relativeTime from "dayjs/plugin/relativeTime";
+
+dayjs.locale("en");
+dayjs.extend(relativeTime);
+
+const toCalendar = (date: string): string => {
+  return dayjs(date).fromNow()
+};
+
+export default toCalendar;
